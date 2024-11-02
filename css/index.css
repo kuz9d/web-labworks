@@ -62,10 +62,6 @@ body {
     font-size: 1rem;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
 .main {
     flex: 1;
 }
@@ -150,4 +146,14 @@ body {
     .footer {
         padding: 10px;
     }
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links li.active a {
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }

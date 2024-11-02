@@ -155,3 +155,7 @@ p {
     word-spacing: 2px;
     text-transform: uppercase;
 }
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
