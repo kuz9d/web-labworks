@@ -1,38 +1,94 @@
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
+h1 {
+    text-align: center;
+}
+
+/* Стили для формы */
 form {
-    margin: 20px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 label {
     display: block;
-    margin-top: 10px;
+    margin: 10px 0 5px;
+    font-weight: bold;
 }
 
-select, input {
-    margin-top: 5px;
+select, input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
 button {
-    margin-top: 20px;
-    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для таблицы */
 table {
-    margin-top: 20px;
+    margin: 20px auto;
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
+    padding: 12px 15px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f8f9fa;
+}
+
+tr:nth-child(even) td {
+    background-color: #e9ecef;
+}
+
+tr:hover td {
+    background-color: #d4e9f9;
+}
+
+/* Заголовок таблицы */
+table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
