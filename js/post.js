@@ -18,24 +18,30 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 preloader.style.display = 'none';
 
-                commentsSection.innerHTML = '<h3>Комментарии</h3>';
+                commentsSection.innerHTML = '';
+                const header = document.createElement('h3');
+                header.textContent = 'Комментарии';
+                commentsSection.appendChild(header);
 
                 data.forEach(comment => {
                     const commentDiv = document.createElement('div');
                     commentDiv.classList.add('comment');
-                    commentDiv.innerHTML = `
-            <p><strong>${comment.name}:</strong> ${comment.body}</p>
-          `;
+
+                    const nameParagraph = document.createElement('p');
+                    const strongElement = document.createElement('strong');
+                    strongElement.textContent = `${comment.name}:`;
+
+                    const bodyText = document.createTextNode(` ${comment.body}`);
+
+                    nameParagraph.appendChild(strongElement);
+                    nameParagraph.appendChild(bodyText);
+
+                    commentDiv.appendChild(nameParagraph);
                     commentsSection.appendChild(commentDiv);
                 });
             })
             .catch(error => {
-                // Handle errors (e.g., network issues)
-                preloader.style.display = 'none';
-                const errorMessage = document.createElement('p');
-                errorMessage.classList.add('error-message');
-                errorMessage.textContent = '⚠ Что-то пошло не так';
-                commentsSection.appendChild(errorMessage);
+                console.error('Error fetching comments:', error);
             });
     }
 
