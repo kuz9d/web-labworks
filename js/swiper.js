@@ -1,16 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Создаем новый экземпляр Swiper после того как весь DOM контент загружен
     const swiper = new Swiper('.swiper-container', {
+        // Включаем зацикливание слайдов (после последнего слайда снова идет первый)
         loop: true,
+        // Устанавливаем количество отображаемых слайдов на одном экране
         slidesPerView: 1,
+        // Устанавливаем расстояние между слайдами
         spaceBetween: 20,
+        // Настроим пагинацию (управление слайдером через точки)
         pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+            el: '.swiper-pagination', // Элемент, который будет содержать точки пагинации
+            clickable: true, // Делаем точки кликабельными
         },
+        // Настроим навигацию (кнопки для перехода к следующему и предыдущему слайду)
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next', // Элемент кнопки для перехода к следующему слайду
+            prevEl: '.swiper-button-prev', // Элемент кнопки для перехода к предыдущему слайду
         },
     });
 });
+
 
