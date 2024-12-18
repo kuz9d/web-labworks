@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заголовок поста</title>
     <link rel="stylesheet" href="../css/post.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/swiper.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/menuInteraction.js"></script>
     <script src="../js/post.js"></script>
 </head>
 <body>
 <header class="header">
-    <div class="container">
+    <div class="container-nav">
         <h1 class="logo">MyBlog</h1>
         <nav class="nav">
             <ul class="nav-links">
@@ -30,7 +33,15 @@
             <span class="date">Дата: 05.10.2024</span>
         </div>
         <div class="post-content">
-            <img class="teapot" src="../images/image.png" alt="чайник">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../images/image2.jpeg" alt="Фото 1"></div>
+                    <div class="swiper-slide"><img src="../images/image3.jpeg" alt="Фото 2"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
             <p>Ща расскажу, как починить чайник))</p>
         </div>
     </article>
@@ -57,3 +68,4 @@
 </footer>
 </body>
 </html>
+
